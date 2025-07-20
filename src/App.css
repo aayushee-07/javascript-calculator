@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.calculator {
+  background-color: black;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+  background-color: #d3d3d3; /* Light gray display area */
+  color: black;
+  font-size: 24px;
+  padding: 15px;
+  text-align: right;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  min-height: 50px;
+  word-wrap: break-word;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  width: 70px;
+  height: 60px;
+  margin: 5px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b72c2c;  /* Red buttons */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover {
+  background-color: #e84118; /* Brighter red on hover */
+}
+
+/* Special styles */
+button.operator {
+  background-color: #ff6347;  /* Lighter red for operators */
+}
+
+button.equal {
+  background-color: #4caf50;  /* Green = button */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.ac {
+  background-color: #555; /* Dark gray for AC */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.cancel {
+  background-color: #333; /* Darker gray for cancel */
 }

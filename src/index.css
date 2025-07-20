@@ -1,13 +1,99 @@
+/* Make background light gray outside calculator */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f0f0f0; /* light white-gray background */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Centered Calculator Box */
+.calculator {
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Display Box (light gray inside calculator) */
+.display {
+  background-color: #d3d3d3; /* light gray */
+  color: #000;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  min-width: 300px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+}
+
+/* Expression line */
+.expression {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Result line */
+.result {
+  font-size: 1.8rem;
+  color: #000;
+}
+
+/* Button Grid */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 10px;
+  justify-content: center;
+}
+
+/* All Buttons */
+.button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+/* Operator Buttons */
+.operator {
+  background-color: red;
+}
+
+/* AC Button */
+.ac {
+  background-color: #ff4444;
+}
+
+/* Cancel (⌫) Button */
+.cancel {
+  background-color: #ff8888;
+}
+
+/* Equals Button */
+.equals {
+  background-color: #00c853;
+}
+
+/* Number and dot buttons */
+.number {
+  background-color: #555;
+}
+
+/* Hover Effect */
+.button:hover {
+  opacity: 0.85;
 }
